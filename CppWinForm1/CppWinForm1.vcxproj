@@ -138,7 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="File_read.cpp" />
-    <ClCompile Include="Generate_X.cpp" />
     <ClCompile Include="memhack.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="patterscan.cpp" />
@@ -147,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="File_read.h" />
-    <ClInclude Include="Generate_X.h" />
     <ClInclude Include="Include_h.h" />
     <ClInclude Include="memhack.h" />
     <ClInclude Include="Form1.h">

@@ -2,11 +2,11 @@
 
 namespace Data_processing {
 
-	class String_hex{
+	
 
 	// Convrt string \x33\xc0.. to hex. Better use with Convert_StringToHexver0() 
 	//(Mybytel) string (First) first Char (secand) secand Char Out put is the hex byte use with Convert_StringToHexver0()
-	char Convert_Hex(std::string  &myBytel, unsigned int first, unsigned int secand)
+	char String_hex::Convert_Hex(std::string  &myBytel, unsigned int first, unsigned int secand)
 	{
 		char temp1 = myBytel[first];
 		char temp2 = myBytel[secand];
@@ -29,7 +29,7 @@ namespace Data_processing {
 	}
 
 	// Convrting string to hex needs Saving the Data in "char *data = new Char"
-	void Convert_StringToHexver0(std::string &str_in, unsigned int str_size, char *&data, unsigned int size_of_Data)
+	void String_hex::Convert_StringToHexver0(std::string &str_in, unsigned int str_size, char *&data, unsigned int size_of_Data)
 	{
 		unsigned int j = 0;
 		for (unsigned int i = 0; i < str_size; i++)
@@ -37,7 +37,7 @@ namespace Data_processing {
 			if (str_in[i] == '\\' && str_in[i + 1] == 'x')
 			{
 
-				data[j] = Convert_Hex(str_in, i + 2, i + 3); //\x33\xc0\x89\x47\x00
+				data[j] = String_hex::Convert_Hex(str_in, i + 2, i + 3); //\x33\xc0\x89\x47\x00
 				j++;
 			}
 		}
@@ -45,7 +45,7 @@ namespace Data_processing {
 	}
 
 	//count the numbe of bytes in a string "\x33\xc0..."
-	unsigned int Ret_Bytes_number(std::string MyString, unsigned int String_size) {
+	unsigned int String_hex::Ret_Bytes_number(std::string MyString, unsigned int String_size) {
 		unsigned int num = 0;
 		for (unsigned int i = 0; i < String_size; i++)
 			if (MyString[i] == '\\' && MyString[i + 1] == 'x')
@@ -53,8 +53,50 @@ namespace Data_processing {
 		return num;
 	}
 
+	// Generating "\x33\xc0\x89\x47..." from input Data: "89 47 0C 89 47 10 89..."
+	std::string String_hex::Generate_Signature(std::string user_str)
+	{
+
+
+		std::string str = user_str;
+		std::string str2 = user_str;
+		std::string sig;
+		unsigned int n = 0;
+
+		for (int i = 0; i < str.size(); ++i)
+		{
+			if (str[i] == ' ')
+			{
+				i++;
+				str.insert(i, "\\x");
+			}
+		}
+		//adding 0x to the code
+		for (int i = 0; i < str.length(); ++i)
+		{
+			if (str2[i] == ' ')
+			{
+				i++;
+				str2.insert(i, "0x");
+			}
+		}
+
+
+		//removing the space from the code
+		for (unsigned int i = 0; i < str.length(); ++i)
+		{
+			if (str[i] != ' ')
+				str[n++] = str[i];
+		}
+		str.resize(n);
+		str.insert(0, "\\x");
+
+		return str; //return the signature
+	}
+
+
 	//Converting \x33\xc0... to "xxxx??xxx..." saving data in "char " data = new char" 
-	void Convert_Sig_toX(std::string &str_in, unsigned int str_size, char *&data, unsigned int size_of_Data)
+	void String_hex::Convert_Sig_toX(std::string &str_in, unsigned int str_size, char *&data, unsigned int size_of_Data)
 	{
 
 
@@ -78,21 +120,51 @@ namespace Data_processing {
 		}
 		data[size_of_Data - 1] = '\0'; // Putting null terminator to the array
 	}
-
-	std::string Sys_tostring(System::String str)
+	
+	//Generats std::string "xxxx??xxx..." from "\x33\xc0\x89\x47..." Input: "\x33\xc0\x89\x47..."
+	std::string String_hex::Generate_XSig(std::string Str_Sign)
 	{
-		std::string unmanaged = msclr::interop::marshal_as<std::string>(str); //converting the System string to std string 
+		unsigned int _size = 0;
+		std::string str;
+		for (unsigned i = 0; i < Str_Sign.length(); i++)
+		{
+			if (Str_Sign[i] == 'x')
+			{
+				if (Str_Sign[i + 1] == '0' && Str_Sign[i + 2] == '0')
+				{
+					str = str + "?";
+					_size++;
+				}
+				else
+				{
+					str = str + "x";
+					_size++;
+				}
+			}
+
+		}
+		str.resize(_size);
+		return str;
+	}
+
+
+
+	//converting the System string to std string 
+	std::string String_hex::Sys_tostring(System::String^ str)
+	{
+		std::string unmanaged = msclr::interop::marshal_as<std::string>(str); 
 
 		return unmanaged;
 		
 	}
 
-	System::String^ _voidToString(void * data)
+	//converting void data to string 
+	System::String^ String_hex::_voidToString(void * data)
 	{
 		std::stringstream ssdata;
 		ssdata << data;
-		System::String^ MyString = marshal_as<System::String^>(ssdata.str());;
+		System::String^ MyString = msclr::interop::marshal_as<System::String^>(ssdata.str());;
 		return  MyString;
 	}
-   };
+	
 }

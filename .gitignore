@@ -1,6 +1,10 @@
 #visual pro Stuffs files 
 /Debug
 /CppWinForm1/Debug
+/CppWinForm1/x64
+
+#sdf file too big
+*.sdf
 
 # Prerequisites
 *.d

@@ -316,13 +316,16 @@ namespace CppWinForm1 {
 
 		void * _testm1;
 		void * _teste2;
+
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		
+		Data_processing::String_hex Data_Pro;
 		String ^ str_data = maskedTextBox1->Text;
-		std::string unmanaged = msclr::interop::marshal_as<std::string>(str_data); //converting the System string to std string 
+		std::string unmanaged = Data_Pro.Sys_tostring(str_data);//converting the System string to std string 
 		richTextBox1->Text += str_data + Environment::NewLine;
 		
+	
 
 		std::string te = unmanaged;
 		//std::string te;
@@ -332,13 +335,13 @@ namespace CppWinForm1 {
 
 			richTextBox1->Text += Environment::NewLine;
 
-		unsigned int char_size = String_hex::Ret_Bytes_number(te, te.size());
+		unsigned int char_size = Data_Pro.Ret_Bytes_number(te, te.size());
 		char *Hex_sig_data = new char[char_size];
 		char *Hex_x_data = new char[char_size + 1];
 
 		try {
-			String_hex::Convert_StringToHexver0(te, te.size(), Hex_sig_data, char_size); //\x80\x7D\xFC\x00\x74\x07\x8B\x4D\xF8\x83\x61
-			String_hex::Convert_Sig_toX(te, te.size(), Hex_x_data, char_size);
+			Data_Pro.Convert_StringToHexver0(te, te.size(), Hex_sig_data, char_size); //\x80\x7D\xFC\x00\x74\x07\x8B\x4D\xF8\x83\x61
+			Data_Pro.Convert_Sig_toX(te, te.size(), Hex_x_data, char_size);
 
 		}
 		catch (Exception())
@@ -357,7 +360,7 @@ namespace CppWinForm1 {
 			if (healthDecAddress != nullptr)
 			{
 				 healthDecAddress;
-				_PrintText("Found The Address", _voidToString(healthDecAddress))
+				_PrintText("Found The Address", Data_Pro._voidToString(healthDecAddress))
 					Sleep(100);
 			}
 			else
@@ -379,7 +382,7 @@ namespace CppWinForm1 {
 
  //read from file
 		private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-
+			Data_processing::String_hex Data_Pro;
 			loger("------------------------------------------")
 				
 				loger("READING FROM FILE:")
@@ -427,7 +430,7 @@ namespace CppWinForm1 {
 
 				//char *SigX_n = const_cast<char*>(Data_sigX.c_str());
 				for (unsigned int i = 0;i < _LineNumber;i++) {
-					char_size[i] = Ret_Bytes_number(str_data[i], str_data[i].size());
+					char_size[i] = Data_Pro.Ret_Bytes_number(str_data[i], str_data[i].size());
 
 				}
 				loger("DONE")
@@ -439,21 +442,21 @@ namespace CppWinForm1 {
 						char *Hex_sig_data = new char[char_size[i]];
 						char *Hex_x_data = new char[char_size[i]];
 						
-							Convert_StringToHexver0(str_data[i], str_data[i].size(), Hex_sig_data, char_size[i]); //\x80\x7D\xFC\x00\x74\x07\x8B\x4D\xF8\x83\x61
-						Convert_Sig_toX(str_data[i], str_data[i].size(), Hex_x_data, char_size[i]);
+						Data_Pro.Convert_StringToHexver0(str_data[i], str_data[i].size(), Hex_sig_data, char_size[i]); //\x80\x7D\xFC\x00\x74\x07\x8B\x4D\xF8\x83\x61
+						Data_Pro.Convert_Sig_toX(str_data[i], str_data[i].size(), Hex_x_data, char_size[i]);
 
 
 						void * healthDecAddress = PatternScanExModule(hProcess, P_name, P_name, Hex_sig_data, Hex_x_data);
 						if (healthDecAddress != nullptr)
 						{
 							nl
-							_PrintText("Address Found:", _voidToString(healthDecAddress))
+							_PrintText("Address Found:", Data_Pro._voidToString(healthDecAddress))
 
 								Sleep(100);
 						}
 						else
 						{
-							_PrintText("Address no found/error ", _voidToString(healthDecAddress))
+							_PrintText("Address no found/error ", Data_Pro._voidToString(healthDecAddress))
 								Sleep(100);
 						}
 
