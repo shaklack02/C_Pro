@@ -1,5 +1,4 @@
 #include "String_To_HEX.h"
-#include <msclr\marshal_cppstd.h>
 
 namespace Data_processing {
 

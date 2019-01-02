@@ -5,7 +5,7 @@
 
 
 
-using namespace msclr::interop;
+//using namespace msclr::interop;
 namespace CppWinForm1 {
 
 
@@ -110,6 +110,7 @@ namespace CppWinForm1 {
 			this->maskedTextBox1->Size = System::Drawing::Size(500, 30);
 			this->maskedTextBox1->TabIndex = 1;
 			this->maskedTextBox1->Text = L"80 7D FC 00 74 07 8B 4D F8 83 61 70 FD";
+			this->maskedTextBox1->MaskInputRejected += gcnew System::Windows::Forms::MaskInputRejectedEventHandler(this, &Form1::maskedTextBox1_MaskInputRejected);
 			// 
 			// richTextBox1
 			// 
@@ -319,15 +320,15 @@ namespace CppWinForm1 {
 	{
 		
 		String ^ str_data = maskedTextBox1->Text;
-		//std::string unmanaged = msclr::interop::marshal_as<std::string>(str_data); //converting the System string to std string 
+		std::string unmanaged = msclr::interop::marshal_as<std::string>(str_data); //converting the System string to std string 
 		richTextBox1->Text += str_data + Environment::NewLine;
 		
 
-		//std::string te = unmanaged;
-		std::string te;
+		std::string te = unmanaged;
+		//std::string te;
 		te = Generate_Signature(te); 
 		String^ s;
-	//	s = msclr::interop::marshal_as<String^>(te);
+		s = msclr::interop::marshal_as<String^>(te);
 
 			richTextBox1->Text += Environment::NewLine;
 
@@ -503,5 +504,11 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 		win_size_check = true;
 	}
 }
+private: System::Void maskedTextBox1_MaskInputRejected(System::Object^  sender, System::Windows::Forms::MaskInputRejectedEventArgs^  e) {
+}
 };
 	}
+
+
+
+

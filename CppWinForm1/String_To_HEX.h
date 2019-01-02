@@ -1,10 +1,11 @@
 #pragma once
+#include <msclr\marshal_cppstd.h>
 #include <string>
 #include <iostream>
 #include <bitset>
 #include <Windows.h>
 #include <sstream>
-
+#include "Include_h.h"
 
 namespace Data_processing
 {
