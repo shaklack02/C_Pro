@@ -1,6 +1,5 @@
 #include "String_To_HEX.h"
 
-namespace Data_processing {
 
 	
 
@@ -167,4 +166,3 @@ namespace Data_processing {
 		return  MyString;
 	}
 	
-}

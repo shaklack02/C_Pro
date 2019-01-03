@@ -1,4 +1,5 @@
-#pragma once	
+#pragma once	 
+#include <Windows.h>
 #include "Include_h.h"
 
 
@@ -320,7 +321,8 @@ namespace CppWinForm1 {
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		
-		Data_processing::String_hex Data_Pro;
+		String_hex Data_Pro;
+
 		String ^ str_data = maskedTextBox1->Text;
 		std::string unmanaged = Data_Pro.Sys_tostring(str_data);//converting the System string to std string 
 		richTextBox1->Text += str_data + Environment::NewLine;
@@ -329,7 +331,7 @@ namespace CppWinForm1 {
 
 		std::string te = unmanaged;
 		//std::string te;
-		te = Generate_Signature(te); 
+		te = Data_Pro.Generate_Signature(te); 
 		String^ s;
 		s = msclr::interop::marshal_as<String^>(te);
 
@@ -382,7 +384,7 @@ namespace CppWinForm1 {
 
  //read from file
 		private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-			Data_processing::String_hex Data_Pro;
+			String_hex Data_Pro;
 			loger("------------------------------------------")
 				
 				loger("READING FROM FILE:")
@@ -420,12 +422,12 @@ namespace CppWinForm1 {
 
 
 				for (unsigned int i = 0;i < _LineNumber;i++)
-					str_data[i] = Generate_Signature(str_data[i]); // 80 7D FC 00 74 07 8B 4D F8 83 61 70 FD
+					str_data[i] = Data_Pro.Generate_Signature(str_data[i]); // 80 7D FC 00 74 07 8B 4D F8 83 61 70 FD
 																   // \x80\x7D\xFC\x00\x74\x07\x8B\x4D\xF8\x83\x61
 
 																   //char *patern_n = const_cast<char*>( Check_data.c_str());
 				for (unsigned int i = 0;i < _LineNumber;i++) {
-					Data_sigX[i] = Generate_XSig(str_data[i]);
+					Data_sigX[i] = Data_Pro.Generate_XSig(str_data[i]);
 				}
 
 				//char *SigX_n = const_cast<char*>(Data_sigX.c_str());
@@ -465,7 +467,7 @@ namespace CppWinForm1 {
 						delete[] Hex_x_data;
 					}
 				delete[] str_data;
-				delete[] Data_sigX;
+				delete[] Data_sigX; 
 				delete[] char_size;
 
 				nl

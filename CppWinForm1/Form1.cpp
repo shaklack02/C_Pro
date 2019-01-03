@@ -3,7 +3,6 @@
 #include "process.h"
 #include "patternscan.h"
 #include <stdlib.h> //for using function sleep
-#include "Generate_X.h"
 #include "String_To_HEX.h"
 
 using namespace System;

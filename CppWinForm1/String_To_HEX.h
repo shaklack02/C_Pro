@@ -7,8 +7,7 @@
 #include <sstream>
 //#include "Include_h.h"
 
-namespace Data_processing
-{
+
 	class String_hex
 	{
 	public:
@@ -24,4 +23,3 @@ namespace Data_processing
 		//Generate the Sig
 		std::string Generate_XSig(std::string Sign);
 	};
-}
