@@ -1,7 +1,9 @@
 #visual pro Stuffs files 
-/bin
-/bin-init
-/.vs
+*bin
+
+*bin-init
+
+*.vs
 
 #sdf file too big
 *.sdf
