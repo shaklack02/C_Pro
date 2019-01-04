@@ -18,22 +18,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="memhack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="patterscan.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="processtools.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="String_To_HEX.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="File_read.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Form1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\String_To_HEX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memhack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\patterscan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\processtools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\File_read.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,23 +41,23 @@
     <ClInclude Include="Form1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="String_To_HEX.h">
+    <ClInclude Include="Header\File_read.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
-    <ClInclude Include="File_read.h">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
-    <ClInclude Include="memhack.h">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
-    <ClInclude Include="patternscan.h">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
-    <ClInclude Include="processtools.h">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
-    <ClInclude Include="Include_h.h">
+    <ClInclude Include="Header\Include_h.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\memhack.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\patternscan.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\processtools.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\String_To_HEX.h">
+      <Filter>Header Files\src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -103,7 +103,7 @@
 		for (unsigned int i = 0; i < str_size; i++)
 		{
 
-			if (str_in[i] == '\\' & str_in[i + 1] == 'x')
+			if (str_in[i] == '\\' && str_in[i + 1] == 'x')
 			{
 
 				if (str_in[i + 2] == 0x30 && str_in[i + 3] == 0x30)

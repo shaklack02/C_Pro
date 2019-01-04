@@ -1,10 +1,7 @@
 #visual pro Stuffs files 
-/Debug
-/x64
+/bin
+/bin-init
 /.vs
-/CppWinForm1/.vs
-/CppWinForm1/Debug
-/CppWinForm1/x64
 
 #sdf file too big
 *.sdf
