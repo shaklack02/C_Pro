@@ -1,6 +1,6 @@
 #pragma once	 
 #include <Windows.h>
-#include "Include_h.h"
+#include "../Header/Include_h.h"
 
 
 
@@ -104,11 +104,12 @@ namespace CppWinForm1 {
 			this->maskedTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->maskedTextBox1->ForeColor = System::Drawing::SystemColors::InactiveBorder;
-			this->maskedTextBox1->Location = System::Drawing::Point(229, 36);
-			this->maskedTextBox1->MaximumSize = System::Drawing::Size(500, 30);
-			this->maskedTextBox1->MinimumSize = System::Drawing::Size(400, 10);
+			this->maskedTextBox1->Location = System::Drawing::Point(172, 29);
+			this->maskedTextBox1->Margin = System::Windows::Forms::Padding(2);
+			this->maskedTextBox1->MaximumSize = System::Drawing::Size(376, 30);
+			this->maskedTextBox1->MinimumSize = System::Drawing::Size(301, 10);
 			this->maskedTextBox1->Name = L"maskedTextBox1";
-			this->maskedTextBox1->Size = System::Drawing::Size(500, 30);
+			this->maskedTextBox1->Size = System::Drawing::Size(376, 26);
 			this->maskedTextBox1->TabIndex = 1;
 			this->maskedTextBox1->Text = L"80 7D FC 00 74 07 8B 4D F8 83 61 70 FD";
 			this->maskedTextBox1->MaskInputRejected += gcnew System::Windows::Forms::MaskInputRejectedEventHandler(this, &Form1::maskedTextBox1_MaskInputRejected);
@@ -116,12 +117,13 @@ namespace CppWinForm1 {
 			// richTextBox1
 			// 
 			this->richTextBox1->BackColor = System::Drawing::SystemColors::ControlText;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->richTextBox1->ForeColor = System::Drawing::Color::Red;
-			this->richTextBox1->Location = System::Drawing::Point(229, 118);
+			this->richTextBox1->ForeColor = System::Drawing::Color::DodgerBlue;
+			this->richTextBox1->Location = System::Drawing::Point(172, 96);
+			this->richTextBox1->Margin = System::Windows::Forms::Padding(2);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(500, 538);
+			this->richTextBox1->Size = System::Drawing::Size(376, 438);
 			this->richTextBox1->TabIndex = 2;
 			this->richTextBox1->Text = L"";
 			// 
@@ -129,9 +131,10 @@ namespace CppWinForm1 {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(12, 31);
+			this->button1->Location = System::Drawing::Point(9, 25);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(190, 42);
+			this->button1->Size = System::Drawing::Size(142, 34);
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"Find Memory Hex";
 			this->button1->UseVisualStyleBackColor = true;
@@ -141,9 +144,10 @@ namespace CppWinForm1 {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(12, 89);
+			this->button2->Location = System::Drawing::Point(9, 72);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(190, 62);
+			this->button2->Size = System::Drawing::Size(142, 50);
 			this->button2->TabIndex = 4;
 			this->button2->Text = L"Read Hex From File";
 			this->button2->UseVisualStyleBackColor = true;
@@ -153,10 +157,11 @@ namespace CppWinForm1 {
 			// 
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(225, 89);
-			this->label2->MaximumSize = System::Drawing::Size(200, 200);
+			this->label2->Location = System::Drawing::Point(169, 72);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->MaximumSize = System::Drawing::Size(150, 162);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(162, 26);
+			this->label2->Size = System::Drawing::Size(122, 21);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"Console";
 			// 
@@ -164,10 +169,11 @@ namespace CppWinForm1 {
 			// 
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(225, 7);
-			this->label3->MaximumSize = System::Drawing::Size(500, 200);
+			this->label3->Location = System::Drawing::Point(169, 6);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->MaximumSize = System::Drawing::Size(375, 162);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(267, 26);
+			this->label3->Size = System::Drawing::Size(200, 21);
 			this->label3->TabIndex = 7;
 			this->label3->Text = L"Hex To Find In Memory";
 			// 
@@ -175,9 +181,10 @@ namespace CppWinForm1 {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(12, 622);
+			this->button3->Location = System::Drawing::Point(9, 505);
+			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(190, 34);
+			this->button3->Size = System::Drawing::Size(142, 28);
 			this->button3->TabIndex = 8;
 			this->button3->Text = L"Exit";
 			this->button3->UseVisualStyleBackColor = true;
@@ -187,9 +194,10 @@ namespace CppWinForm1 {
 			// 
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(12, 172);
+			this->button4->Location = System::Drawing::Point(9, 140);
+			this->button4->Margin = System::Windows::Forms::Padding(2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(190, 39);
+			this->button4->Size = System::Drawing::Size(142, 32);
 			this->button4->TabIndex = 9;
 			this->button4->Text = L"Clear Console";
 			this->button4->UseVisualStyleBackColor = true;
@@ -201,9 +209,10 @@ namespace CppWinForm1 {
 			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->richTextBox2->ForeColor = System::Drawing::Color::Red;
-			this->richTextBox2->Location = System::Drawing::Point(12, 424);
+			this->richTextBox2->Location = System::Drawing::Point(9, 344);
+			this->richTextBox2->Margin = System::Windows::Forms::Padding(2);
 			this->richTextBox2->Name = L"richTextBox2";
-			this->richTextBox2->Size = System::Drawing::Size(190, 175);
+			this->richTextBox2->Size = System::Drawing::Size(144, 143);
 			this->richTextBox2->TabIndex = 10;
 			this->richTextBox2->Text = L"";
 			// 
@@ -212,9 +221,10 @@ namespace CppWinForm1 {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(8, 383);
+			this->label1->Location = System::Drawing::Point(6, 311);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(80, 24);
+			this->label1->Size = System::Drawing::Size(66, 18);
 			this->label1->TabIndex = 11;
 			this->label1->Text = L"LOGER";
 			// 
@@ -222,20 +232,22 @@ namespace CppWinForm1 {
 			// 
 			this->textBox1->BackColor = System::Drawing::SystemColors::InactiveCaptionText;
 			this->textBox1->ForeColor = System::Drawing::SystemColors::InactiveBorder;
-			this->textBox1->Location = System::Drawing::Point(12, 313);
-			this->textBox1->MaximumSize = System::Drawing::Size(190, 40);
+			this->textBox1->Location = System::Drawing::Point(9, 254);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
+			this->textBox1->MaximumSize = System::Drawing::Size(144, 40);
 			this->textBox1->MinimumSize = System::Drawing::Size(4, 40);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(190, 22);
+			this->textBox1->Size = System::Drawing::Size(144, 20);
 			this->textBox1->TabIndex = 12;
 			// 
 			// button5
 			// 
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(12, 235);
+			this->button5->Location = System::Drawing::Point(9, 191);
+			this->button5->Margin = System::Windows::Forms::Padding(2);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(190, 33);
+			this->button5->Size = System::Drawing::Size(142, 27);
 			this->button5->TabIndex = 13;
 			this->button5->Text = L"Write To Memory";
 			this->button5->UseVisualStyleBackColor = true;
@@ -244,12 +256,13 @@ namespace CppWinForm1 {
 			// richTextBox3
 			// 
 			this->richTextBox3->BackColor = System::Drawing::SystemColors::WindowText;
-			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->richTextBox3->ForeColor = System::Drawing::Color::Lime;
-			this->richTextBox3->Location = System::Drawing::Point(746, 74);
+			this->richTextBox3->Location = System::Drawing::Point(560, 60);
+			this->richTextBox3->Margin = System::Windows::Forms::Padding(2);
 			this->richTextBox3->Name = L"richTextBox3";
-			this->richTextBox3->Size = System::Drawing::Size(373, 586);
+			this->richTextBox3->Size = System::Drawing::Size(285, 477);
 			this->richTextBox3->TabIndex = 14;
 			this->richTextBox3->Text = L"";
 			this->richTextBox3->WordWrap = false;
@@ -258,9 +271,10 @@ namespace CppWinForm1 {
 			// 
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->Location = System::Drawing::Point(1013, 31);
+			this->button6->Location = System::Drawing::Point(760, 25);
+			this->button6->Margin = System::Windows::Forms::Padding(2);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(106, 33);
+			this->button6->Size = System::Drawing::Size(80, 27);
 			this->button6->TabIndex = 15;
 			this->button6->Text = L"Close";
 			this->button6->UseVisualStyleBackColor = true;
@@ -269,18 +283,19 @@ namespace CppWinForm1 {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(760, 42);
+			this->label4->Location = System::Drawing::Point(570, 34);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(46, 17);
+			this->label4->Size = System::Drawing::Size(35, 13);
 			this->label4->TabIndex = 16;
 			this->label4->Text = L"label4";
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
-			this->ClientSize = System::Drawing::Size(1141, 666);
+			this->ClientSize = System::Drawing::Size(856, 548);
 			this->ControlBox = false;
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button6);
@@ -297,6 +312,7 @@ namespace CppWinForm1 {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->maskedTextBox1);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->MaximizeBox = false;
 			this->Name = L"Form1";
 			this->Text = L"Form1";
@@ -310,18 +326,25 @@ namespace CppWinForm1 {
 
 		//def
 #define dbglog(name) richTextBox2->Text += "DBG:"+ name + Environment::NewLine;
-#define p(name) richTextBox1->Text +=  name + Environment::NewLine;
+#define p(name_1) richTextBox1->Text +=  name_1 + Environment::NewLine;
 #define nl richTextBox1->Text +=  Environment::NewLine;
-#define _PrintText(name0,name1) richTextBox1->Text +=  (name0 + " " + name1 + Environment::NewLine);
-#define loger(name) richTextBox1->Text += name + Environment::NewLine;
+#define _PrintText(name0,name1) richTextBox1->Text +=  ("<Loger> " + name0 + " " + name1 + Environment::NewLine);
+#define _loger(n_name1,name2) richTextBox3->Text += ("<Loger> " + n_name1 + " " + name2 + Environment::NewLine);
+#define loger(name_2) richTextBox1->Text += name_2 + Environment::NewLine;
+		
+	    wchar_t * Process_name = L"ForgedAlliance.exe";
 
-		void * _testm1;
-		void * _teste2;
+
+//#define DEBUG_MBOX //turn on off the message box
 
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
 	{
-		
+		//System::String^ const str1 = gcnew System::String(Process_name); //Converting White char to System String
+
+		_loger("Process ", gcnew System::String(Process_name))
+
 		String_hex Data_Pro;
+		Patern_Scan P_S;
 
 		String ^ str_data = maskedTextBox1->Text;
 		std::string unmanaged = Data_Pro.Sys_tostring(str_data);//converting the System string to std string 
@@ -353,17 +376,34 @@ namespace CppWinForm1 {
 
 		try {
 			//Get Process ID by enumerating the processes using tlhelp32snapshot
-			DWORD processID = GetProcID(L"ForgedAlliance.exe");
+			DWORD processID = GetProcID(Process_name);
 			//Get handle by OpenProcess
 			HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, processID);
 			//PatternScan
 
-			void * healthDecAddress = PatternScanExModule(hProcess, L"ForgedAlliance.exe", L"ForgedAlliance.exe", Hex_sig_data, Hex_x_data);
+	//debug---------------------------------------------------------------------------------------------------------------------------------
+			P_S.Memory_base_address(hProcess, Process_name, Process_name);
+
+			//TODO fix the printing of the base address
+			void* start_base_address = (void*)P_S.begin;
+			void* end_base_address = (void*)P_S.end;
+
+			#ifdef DEBUG_MBOX MessageBox::Show(Data_Pro._voidToString((void*)P_S.begin), " Notification", MessageBoxButtons::OKCancel, MessageBoxIcon::Asterisk);
+				#endif // DEBUG
+
+			_loger("begin ", Data_Pro._voidToString((void*)P_S.begin)) // Show the base address of the Process
+			_loger("end ", Data_Pro._voidToString((void*)P_S.end)) // Show the end address of the Process
+
+				loger("Stop")
+
+				std::getchar();
+	//---------------------------------------------------------------------------------------------------------------------------------------
+			void * healthDecAddress = P_S.PatternScanExModule(hProcess, Process_name, Process_name, Hex_sig_data, Hex_x_data);
 			if (healthDecAddress != nullptr)
 			{
 				 healthDecAddress;
 				_PrintText("Found The Address", Data_Pro._voidToString(healthDecAddress))
-					Sleep(100);
+				Sleep(100);
 			}
 			else
 			{
@@ -384,15 +424,18 @@ namespace CppWinForm1 {
 
  //read from file
 		private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+
 			String_hex Data_Pro;
+			Patern_Scan P_S;
+
 			loger("------------------------------------------")
 				
 				loger("READING FROM FILE:")
 				//process name
-				wchar_t *P_name = L"ForgedAlliance.exe";
+				
 
 			//Get Process ID by enumerating the processes using tlhelp32snapshot
-			DWORD processID = GetProcID(P_name);
+			DWORD processID = GetProcID(Process_name);
 			if ((processID == NULL))
 			{
 				p("Process Not Found Exiting The Program");
@@ -406,8 +449,8 @@ namespace CppWinForm1 {
 			if ((_LineNumber == NULL))
 			{
 				p("0 Lines File is empty");
-				MessageBox::Show("The operation has been completed ", "Notification", MessageBoxButtons::OKCancel, MessageBoxIcon::Asterisk);
-
+					#ifdef DEBUG_MBOX MessageBox::Show("The operation has been completed ", "Notification", MessageBoxButtons::OKCancel, MessageBoxIcon::Asterisk);
+						#endif
 			}
 			else
 			{
@@ -448,7 +491,7 @@ namespace CppWinForm1 {
 						Data_Pro.Convert_Sig_toX(str_data[i], str_data[i].size(), Hex_x_data, char_size[i]);
 
 
-						void * healthDecAddress = PatternScanExModule(hProcess, P_name, P_name, Hex_sig_data, Hex_x_data);
+						void * healthDecAddress = P_S.PatternScanExModule(hProcess, Process_name, Process_name, Hex_sig_data, Hex_x_data);
 						if (healthDecAddress != nullptr)
 						{
 							nl

@@ -75,25 +75,25 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bit-init\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)bitinit\$(Configuration)\</IntDir>
     <IncludePath>C:\Users\REDhql\Desktop\New folder %283%29\c_pro\CppWinForm1\Header;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bit-init\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)bitinit\$(Configuration)\</IntDir>
     <IncludePath>C:\Users\REDhql\Desktop\New folder %283%29\c_pro\CppWinForm1\Header;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bit-init\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)bitinit\$(Configuration)\</IntDir>
     <IncludePath>C:\Users\REDhql\Desktop\New folder %283%29\c_pro\CppWinForm1\Header;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)bit-init\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)bitinit\$(Configuration)\</IntDir>
     <IncludePath>C:\Users\REDhql\Desktop\New folder %283%29\c_pro\CppWinForm1\Header;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -166,6 +166,7 @@
   <ItemGroup>
     <ClInclude Include="Header\File_read.h" />
     <ClInclude Include="Header\Include_h.h" />
+    <ClInclude Include="Header\Loger.h" />
     <ClInclude Include="Header\memhack.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>

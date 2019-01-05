@@ -7,7 +7,7 @@
 #endif
 
 //Internal Pattern Scan
-void * PatternScan(char* base, size_t size, char* pattern, char* mask)
+void * Patern_Scan::PatternScan(char* base, size_t size, char* pattern, char* mask)
 {
 	size_t patternLength = strlen(mask);
 
@@ -32,7 +32,7 @@ void * PatternScan(char* base, size_t size, char* pattern, char* mask)
 }
 
 //External Wrapper
-void * PatternScanEx(HANDLE hProcess, uintptr_t begin, uintptr_t end, char* pattern, char*  mask)
+void * Patern_Scan::PatternScanEx(HANDLE hProcess, uintptr_t begin, uintptr_t end, char* pattern, char*  mask)
 {
 
 	uintptr_t currentChunk = begin;
@@ -52,7 +52,7 @@ void * PatternScanEx(HANDLE hProcess, uintptr_t begin, uintptr_t end, char* patt
 			return nullptr;
 		}
 
-		void* internalAddress = PatternScan((char*)&buffer, bytesRead, pattern, mask);
+		void* internalAddress = Patern_Scan::PatternScan((char*)&buffer, bytesRead, pattern, mask);
 
 		if (internalAddress != nullptr)
 		{
@@ -71,7 +71,7 @@ void * PatternScanEx(HANDLE hProcess, uintptr_t begin, uintptr_t end, char* patt
 }
 
 //Module wrapper for external pattern scan
-void * PatternScanExModule(HANDLE hProcess, wchar_t * exeName, wchar_t* module, char* pattern, char* mask)
+void * Patern_Scan::PatternScanExModule(HANDLE hProcess, wchar_t * exeName, wchar_t* module, char* pattern, char* mask)
 {
 	
 		
@@ -86,5 +86,25 @@ void * PatternScanExModule(HANDLE hProcess, wchar_t * exeName, wchar_t* module, 
 	
 	uintptr_t begin = (uintptr_t)modEntry.modBaseAddr;
 	uintptr_t end = begin + modEntry.modBaseSize;
-	return PatternScanEx(hProcess, begin, end, pattern, mask);
+	return Patern_Scan::PatternScanEx(hProcess, begin, end, pattern, mask);
 }
+
+
+//just for debug
+void Patern_Scan::Memory_base_address(HANDLE hProcess, wchar_t * exeName, wchar_t* module)
+{
+	//p("calling GetProcID again from exModule")
+
+	Patern_Scan::processID = GetProcID(exeName);
+	Patern_Scan::modEntry = GetModule(Patern_Scan::processID, module);
+
+	if (!Patern_Scan::modEntry.th32ModuleID)
+	{
+		
+	}
+	//p("going to the patern checking function")
+	Patern_Scan::begin = (uintptr_t)modEntry.modBaseAddr;
+	Patern_Scan::end = begin + modEntry.modBaseSize;
+}
+
+

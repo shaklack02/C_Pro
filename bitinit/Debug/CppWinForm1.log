@@ -1,0 +1,12 @@
+﻿  Form1.cpp
+c:\users\redhql\desktop\new folder (3)\c_pro\cppwinform1\form1.h(391): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\redhql\desktop\new folder (3)\c_pro\cppwinform1\form1.h(452): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\redhql\desktop\new folder (3)\c_pro\cppwinform1\form1.h(363): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\redhql\desktop\new folder (3)\c_pro\cppwinform1\form1.h(368): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\redhql\desktop\new folder (3)\c_pro\cppwinform1\form1.h(369): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\redhql\desktop\new folder (3)\c_pro\cppwinform1\form1.h(478): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\redhql\desktop\new folder (3)\c_pro\cppwinform1\form1.h(490): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\redhql\desktop\new folder (3)\c_pro\cppwinform1\form1.h(491): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  File_read.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  File_read.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  CppWinForm1.vcxproj -> C:\Users\REDhql\Desktop\New folder (3)\c_pro\bin\x64\Debug\CppWinForm1.exe

@@ -6,6 +6,6 @@
 	#include "String_To_HEX.h"
 	#include <sstream>
 	#include "File_read.h"
-
+	//#include "Loger.h"
 
 
